@@ -7,6 +7,7 @@ function Payment() {
     const [OTPEnter, setOTP] = useState("");
     const [passEnter, setPassEnter] = useState("");
     const [transactionStatus, setTransactionStatus] = useState("");
+    const [method, setMethod] = useState("");
 
     const [name, setName] = useState("");
     const [mobile, setMobile] = useState("");
@@ -52,17 +53,59 @@ function Payment() {
                     <label className="login-labels">Mobile Number</label>
                     <input className="login-feilds" value={mobile} onChange={(e) => setMobile(e.target.value)} />
 
-                    <label className="login-labels">Card</label>
-                    <input className="login-feilds" value={card} onChange={(e) => setCard(e.target.value)} />
 
-                    <label className="login-labels">Card Number</label>
-                    <input className="login-feilds" value={cardNo} onChange={(e) => setCardNo(e.target.value)} />
+                    <h3>Select Method of Transfer</h3>
+<div className="method-options">
+    <label>
+        <input
+            type="radio"
+            name="method"
+            value="card"
+            checked={method === "card"}
+            onChange={(e) => setMethod(e.target.value)}
+        />
+        Card
+    </label>
+    <label>
+        <input
+            type="radio"
+            name="method"
+            value="biometric"
+            checked={method === "biometric"}
+            onChange={(e) => setMethod(e.target.value)}
+        />
+        Biometric
+    </label>
+    <label>
+        <input
+            type="radio"
+            name="method"
+            value="online"
+            checked={method === "online"}
+            onChange={(e) => setMethod(e.target.value)}
+        />
+        Online Banking
+    </label>
+</div>
 
-                    <label className="login-labels">Expiry Date</label>
-                    <input className="login-feilds" value={expiry} onChange={(e) => setExpiry(e.target.value)} />
+{/* Show card fields only if "card" is selected */}
+{method === "card" && (
+    <div className="card-details">
+        <h3>Enter Card Details:</h3>
+        <label className="login-labels">Amount</label>
+        <input className="login-feilds" />
 
-                    <label className="login-labels">CVV</label>
-                    <input className="login-feilds" value={cvv} onChange={(e) => setCvv(e.target.value)} />
+        <label className="login-labels">Card Number</label>
+        <input className="login-feilds" value={cardNo} onChange={(e) => setCardNo(e.target.value)} />
+
+        <label className="login-labels">Expiry Date</label>
+        <input className="login-feilds" value={expiry} onChange={(e) => setExpiry(e.target.value)} />
+
+        <label className="login-labels">CVV</label>
+        <input className="login-feilds" value={cvv} onChange={(e) => setCvv(e.target.value)} />
+    </div>
+)}
+
 
                     <button type="submit">Send OTP</button>
                 </form>

@@ -66,4 +66,20 @@
   .failure {
     color: #b30000;
   }
+
+  .method-options {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .method-options label {
+    font-weight: bold;
+    color: #004a3f;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
   
