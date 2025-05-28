@@ -1,0 +1,69 @@
+/* Container */
+.paymentPage {
+    max-width: 500px;
+    margin: 15vh 34vw;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  /* Headings */
+  h2, h3 {
+    text-align: center;
+    color: #004a3f;
+  }
+  
+  h5, p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  /* Labels */
+  .login-labels {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #004a3f;
+  }
+  
+  /* Input fields */
+  .login-feilds {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  
+  /* Buttons */
+  button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #004a3f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #006b5a;
+  }
+  
+  /* Status messages */
+  .success {
+    color: #004a3f;
+  }
+  
+  .failure {
+    color: #b30000;
+  }
+  
