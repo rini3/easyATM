@@ -20,7 +20,7 @@ function Login() {
         } else if (password !== "pass123") {
             alert('Password is wrong!');
         } else {
-            navigate('/payment');
+            navigate('/operations');
         }
     };
 
